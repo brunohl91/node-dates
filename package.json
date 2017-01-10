@@ -1,0 +1,17 @@
+{
+  "name": "datas-node",
+  "version": "1.0.0",
+  "description": "Projeto para buscar as datas móveis do Brasil, como dia das mães e dia dos pais até o ano de 2199",
+  "main": "app.js",
+  "scripts": {
+    "test": "test app"
+  },
+  "keywords": [
+    "datas",
+    "comemorativas",
+    "móveis",
+    "variaveis"
+  ],
+  "author": "Bruno H. Leite",
+  "license": "MIT"
+}
