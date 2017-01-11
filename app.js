@@ -17,11 +17,31 @@ const fileOutput = process.argv[2] || 'output.csv';
 const fs = require('fs');
 
 let dates = { // as many as you want
+  /*
   'key': {
     'day': 0, // sun = 0, mon = 1, tue = 2, wed = 3, thu = 4, fri = 5, sat = 6
     'month': 5, // 1 = Jan, 2 = Feb [...]
     'order': 2, // *nd occurrence in the Month (e.g: If 3rd Sunday, use order = 3)
     'dates': [], // leave it blank and the script will fill it
+  }
+  */
+  'pais': {
+    'day': 0,
+    'month': 8,
+    'order': 2,
+    'dates': [],
+  },
+  'maes': {
+    'day': 0,
+    'month': 5,
+    'order': 2,
+    'dates': [],
+  },
+  'cooperativismo': {
+    'day': 6,
+    'month': 7,
+    'order': 1,
+    'dates': [],
   }
 }
 
@@ -56,7 +76,7 @@ function calc ( year, month, day, orderObj ) {
     }
     d = (order != orderObj) ? d.addDays(1) : d;
   }
-  return d.getFullYear() + '-' + ('0' + d.getMonth()).slice(-2) + '-' + ('0' + d.getDate()).slice(-2);
+  return d.getFullYear() + '-' + ('0' + (d.getMonth() + 1)).slice(-2) + '-' + ('0' + d.getDate()).slice(-2);
 }
 
 /**
